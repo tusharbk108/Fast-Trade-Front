@@ -1,0 +1,34 @@
+<body>
+   
+    <h1><strong>Fast Trade Home</strong></h1>
+    <br><br>
+    <table  class = "home" border="1">
+    <tbody style="width: 40%;">
+    <tr>
+    <th style="font-size: larger;color: blue;background-color:rgb(184, 182, 182);">Stock Symbol</th>
+    <th style="font-size: larger;color: blue;background-color: rgb(184, 182, 182);text-align: right;">Current Price</th>
+    </tr>
+    <tr *ngFor="let elements of symbol ; let i = index">
+    <th (click)="getDetails(symbol[i])">{{symbol[i]}}</th>
+    <td >{{price[i]}}</td>
+    </tr>
+    <!-- <tr>
+    <th ><a routerLink="tcs">TCS</a></th>
+    <td >2200.00</td>
+    </tr>
+    <tr>
+        <th ><a routerLink="tata-motor">Tata Motors</a></th>
+    <td >555.66</td>
+    </tr>
+    <tr>
+        <th ><a routerLink="cadila">Cadila Health Care</a></th>
+    <td >400.29</td>
+    </tr>
+    <tr>
+        <th ><a routerLink="bajaj">Bajaj Finance</a></th>
+    <td >2312.98</td>
+    </tr> -->
+    </tbody>
+    </table>
+  </body>
+  

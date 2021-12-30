@@ -1,0 +1,36 @@
+
+<body>
+    <h1><strong>Fast Trade</strong></h1>
+    <br>
+    <table  class = "home" border="1">
+        <tbody style="width: 40%;">
+        <tr>
+        <th style="font-size: larger;width: 180px ;color: blue;background-color:rgb(214, 209, 209);">Stock Symbol</th>
+        <td style="width: 180px;">{{name}}</td>
+    </tr>    
+    <tr>
+        <th style="font-size: larger;width: 180px ;color: blue;background-color:rgb(214, 209, 209);">Current Price</th>
+        <td style="width: 180px;">{{price[4]}}</td>
+    </tr>    
+   </tbody>
+   </table>
+   <br><br>
+    <h1><strong>Last 5 Trade History</strong></h1>
+    <br><br>
+    <table  class = "home" border="1">
+    <tbody style="width: 40%;">
+    <tr>
+    <th style="font-size: larger;color: blue;background-color:rgb(214, 209, 209);">Stock Symbol</th>
+    <th style="font-size: larger;color: blue;background-color: rgb(214, 209, 209);text-align: right;">Trade Price</th>
+    <th style="font-size: larger;color: blue;background-color: rgb(214, 209, 209);text-align: right;">Trade Timestamp</th>
+    </tr>
+   <tr *ngFor="let elements of symbol ; let i = index"> 
+       <td style="text-align: left;">{{symbol[i]}}</td>
+       <td>{{price[i]}}</td>
+       <td>{{timestamp[i]}}</td>
+   </tr>
+  
+    </tbody>
+    </table>
+  </body>
+  
