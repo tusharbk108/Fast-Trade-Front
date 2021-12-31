@@ -12,6 +12,7 @@ export class HomePageComponent implements OnInit {
  data:Observable<HomeClass[]>| any;
  symbol=[];
  price = [];
+  interval:any;
 
   constructor(
     private homeService:HomeService,
@@ -24,15 +25,23 @@ export class HomePageComponent implements OnInit {
         this.price=data[1];
         this.data=data;
       console.log(this.data[0]);
-      
-    }
-    
-    
+    }  
     );
 
-
+    setInterval(function(){
+    window.location.reload();
+    },5000);
   }
 
+refresh(){
+ this.data = this.homeService.getAllTrade();
+        this.symbol=this.data[0]
+        this.price=this.data[1];
+       
+ 
+}
+
+ 
   getDetails(symbol:string){
     this.router.navigate(['details',symbol]);
   }

@@ -8,6 +8,7 @@ table{
 }
 td{
     text-align: right;
+    height: 25px;
 }
 th{
     text-align: left;

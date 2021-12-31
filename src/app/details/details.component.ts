@@ -12,6 +12,7 @@ export class DetailsComponent implements OnInit {
 symbol=[];
 price=[];
 timestamp=[];
+interval :any;
 
   constructor(private _Activatedroute:ActivatedRoute,
     private homeService:HomeService,) { }
@@ -30,6 +31,10 @@ timestamp=[];
          console.log(data);
         }
       );
+
+      setInterval(function() { window.location.reload();}, 5000);
+      
+     // window.location.reload();
   }
 
 }
