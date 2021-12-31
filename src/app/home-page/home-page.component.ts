@@ -12,6 +12,7 @@ export class HomePageComponent implements OnInit {
  data:Observable<HomeClass[]>| any;
  symbol=[];
  price = [];
+ count =5;
   interval:any;
 
   constructor(
